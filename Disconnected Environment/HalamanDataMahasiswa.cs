@@ -175,6 +175,7 @@ namespace Disconnected_Environment
             cbxProdi.ValueMember = "id_prodi";
             cbxProdi.DataSource = ds.Tables[0];
         }
+
        
     }
 }

@@ -52,9 +52,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbxJenisKelamin = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
@@ -304,18 +304,6 @@
             this.label4.Text = "Alamat";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 67);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 31);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "Jenis Kelamin";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -335,6 +323,19 @@
             this.cbxJenisKelamin.Name = "cbxJenisKelamin";
             this.cbxJenisKelamin.Size = new System.Drawing.Size(121, 24);
             this.cbxJenisKelamin.TabIndex = 5;
+            this.cbxJenisKelamin.Text = "L/K";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(22, 67);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 31);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Jenis Kelamin";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // btnAdd
             // 

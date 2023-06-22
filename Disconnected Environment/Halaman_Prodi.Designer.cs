@@ -38,6 +38,8 @@ namespace Disconnected_Environment
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.nmp = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.idp = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@ namespace Disconnected_Environment
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(498, 287);
+            this.btnAdd.Location = new System.Drawing.Point(498, 290);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(84, 28);
             this.btnAdd.TabIndex = 2;
@@ -63,7 +65,7 @@ namespace Disconnected_Environment
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(439, 321);
+            this.btnSave.Location = new System.Drawing.Point(408, 367);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 28);
             this.btnSave.TabIndex = 7;
@@ -73,7 +75,7 @@ namespace Disconnected_Environment
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(326, 321);
+            this.btnClear.Location = new System.Drawing.Point(309, 367);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(84, 28);
             this.btnClear.TabIndex = 9;
@@ -95,7 +97,7 @@ namespace Disconnected_Environment
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(216, 291);
+            this.label1.Location = new System.Drawing.Point(201, 294);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 18);
             this.label1.TabIndex = 11;
@@ -103,16 +105,35 @@ namespace Disconnected_Environment
             // 
             // nmp
             // 
-            this.nmp.Location = new System.Drawing.Point(309, 290);
+            this.nmp.Location = new System.Drawing.Point(294, 293);
             this.nmp.Name = "nmp";
             this.nmp.Size = new System.Drawing.Size(183, 22);
             this.nmp.TabIndex = 12;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(201, 323);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 18);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "ID Prodi";
+            // 
+            // idp
+            // 
+            this.idp.Location = new System.Drawing.Point(293, 322);
+            this.idp.Name = "idp";
+            this.idp.Size = new System.Drawing.Size(184, 22);
+            this.idp.TabIndex = 14;
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.idp);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.nmp);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -144,6 +165,8 @@ namespace Disconnected_Environment
         private DataGridView dataGridView1;
         private Label label1;
         private TextBox nmp;
+        private Label label2;
+        private TextBox idp;
 
         public DataGridViewCellEventHandler dataGridView1_CellContentClick { get; private set; }
     }

@@ -22,7 +22,9 @@ namespace Disconnected_Environment
         private void refreshform()
         {
             nmp.Text = "";
+            idp.Text = "";
             nmp.Enabled = false;
+            idp.Enabled = false;    
             btnSave.Enabled = false;
             btnClear.Enabled = false;
 
@@ -40,6 +42,7 @@ namespace Disconnected_Environment
         
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            idp.Enabled=true;
             nmp.Enabled=true;
             btnSave.Enabled=true;
             btnClear.Enabled=true;
@@ -49,7 +52,10 @@ namespace Disconnected_Environment
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
             string nmProdi = nmp.Text;
+            string idProdi = idp.Text;
+            
             if(nmProdi == "")
             {
                 MessageBox.Show("Masukkan Nama Prodi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -57,10 +63,11 @@ namespace Disconnected_Environment
             else
             {
                 koneksi.Open();
-                string str = "insert into dbo.prodi (nama_prodi)" + "values(@id)";
+                string str = "insert into dbo.prodi (id_prodi,nama_prodi)" + "values(@id,@namap)";
                 SqlCommand cmd = new SqlCommand(str, koneksi);
                 cmd.CommandType = CommandType.Text;
-                cmd.Parameters.Add(new SqlParameter("id",nmProdi));
+                cmd.Parameters.Add(new SqlParameter("id",idProdi));
+                cmd.Parameters.Add(new SqlParameter("namap", nmProdi));
                 cmd.ExecuteNonQuery();
 
                 koneksi.Close();
@@ -87,7 +94,7 @@ namespace Disconnected_Environment
         private void dataGridView()
         {
             koneksi.Open();
-            string str = "select nama_prodi from dbo.prodi";
+            string str = "select * from dbo.prodi";
             SqlDataAdapter da = new SqlDataAdapter(str, koneksi);
             DataSet ds = new DataSet();
             da.Fill(ds);
